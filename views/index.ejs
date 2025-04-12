@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/images/logo2.jpg">
+    <title>Hot Wheels</title>
+    <!-- Locomotive Scroll CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+    <!-- Shery js css-->
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <!-- Main css -->
+    <link rel="stylesheet" href="/stylesheets/style.css"> 
+    <!-- tailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+</head>
+<body id="main" class="bg-[url('/images/bg.png')] bg-cover bg-center text-white">
+    <main class="w-full">
+        <!-- Page 1 -->
+        <div class="min-h-screen px-4 md:px-10">
+            <!-- Navigation -->
+            <nav class="py-4 flex flex-col md:flex-row items-center justify-between gap-6">
+                <img
+                id="btn"
+                class="h-20 w-32 cursor-pointer md:h-32 md:w-48"
+                loading="lazy"
+                src="/images/hotwheel.png"
+                alt="Logo"
+                onclick="location.reload();"
+              />
+                
+                <div class="flex items-center border-2 border-black rounded-full px-4 py-2 w-full max-w-60 md:max-w-xs bg-zinc-300">
+                    <input type="text" id="searchInput" placeholder="Search..." 
+                           class="bg-transparent outline-none text-black placeholder:text-black flex-grow">
+                    <svg class="w-4 h-4 text-black cursor-pointer" onclick="submitSearch()" 
+                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" 
+                              stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                    </svg>
+                </div>
+                 
+                <div class="hidden md:flex gap-8">
+                    <a id="btn" class="text-lg text-[#fd5005] font-['Orbitron'] font-semibold" href="">Shop</a>
+                    <a id="btn" class="text-lg text-[#fd5005] font-['Orbitron'] font-semibold" href="">Buy</a>
+                    <a id="btn" class="text-lg text-[#fd5005] font-['Orbitron'] font-semibold" href="">Cart</a>
+                    <a id="btn" class="text-lg text-[#fd5005] font-['Orbitron'] font-semibold" href="">New launch</a>
+                </div>
+                
+                <button id="btn" class="px-4 py-2 bg-black text-white font-semibold rounded-lg">Login</button>
+            </nav>
+
+            <!-- Main Content -->
+            <div class="py-6 md:py-10 text-center">
+                <h1 id="text" class="font-['Orbitron'] text-3xl md:text-5xl font-bold text-orange-500 italic drop-shadow-md" style="-webkit-text-stroke: 1px black;">
+                    <span class="text-[#fd5005] drop-shadow-[2px_2px_0_rgba(0,0,0,1)]">
+                        “Start Your Engines and Fill Your Garage!”
+                    </span>
+                </h1>
+                <div class="mx-auto mt-2 h-[4px] md:h-[8px] w-[80%] md:w-[46%] bg-gradient-to-r from-[#fd5005] to-[#e14400] rounded-full" ></div>
+            </div>
+
+            <div id="effect" class="w-full flex mt-10 md:mt-4 justify-center">
+                <img loading="lazy" class="w-full md:w-[70%]" src="./images/main.png" alt="Main car">
+            </div>
+        </div>
+
+        <!-- Page 2 -->
+        <div class="min-h-screen px-4 md:px-10 md:mt-20">
+            <h1 class="font-['Orbitron'] text-4xl md:text-7xl font-bold text-[#fd5005] pl-4 md:pl-20" style="-webkit-text-stroke: 1px black;">
+                Hottest Wheel Right Now
+            </h1>
+
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4 mt-8 md:mt-16">
+                <img loading="lazy" id="btn" class="w-full md:w-[30%]" src="./images/car1.png" alt="Car 1">
+                <img loading="lazy" id="btn" class="w-full md:w-[30%]" src="./images/car2.png" alt="Car 2">
+                <img loading="lazy" id="btn" class="w-full md:w-[30%]" src="./images/car3.png" alt="Car 3">
+            </div>
+
+            <h1 class="font-['Orbitron'] text-4xl md:text-7xl font-bold text-[#fd5005] mt-10 md:mt-40 pl-4 md:pl-20" style="-webkit-text-stroke: 1px black;">
+                Build the ultimate Track!
+            </h1>
+
+            <div class="flex flex-col md:flex-row gap-8 p-4  md:p-8 mt-8">
+                <div class="w-full pl-16 md:w-[45%] space-y-8">
+                    <div>
+                        <h2 class="text-xl md:text-3xl font-semibold text-[#fd5005]">Loop</h2>
+                        <p class="text-gray-400 text-sm mt-3 md:text-lg">Vertical loops that cars zoom through upside down.</p>
+                    </div>
+                    <div class="mt-8">
+                        <h2 class="text-xl md:text-3xl font-semibold text-[#fd5005]">Crash zones</h2>
+                        <p class="text-gray-400 text-sm mt-3 md:text-lg">Body text for whatever you'd like to say. Add main takeaway points, quotes, anecdotes.</p>
+                    </div>
+                    <div class="mt-8">
+                        <h2 class="text-xl md:text-3xl font-semibold text-[#fd5005]">Launchers</h2>
+                        <p class="text-gray-400 text-sm mt-3 md:text-lg">Spring-loaded or button-activated launch mechanism</p>
+                    </div>
+                    <button id="btn" class="px-4 py-2 bg-black text-white rounded-lg">Build Track</button>
+                </div>
+                
+                <div class="w-full md:w-[45%]">
+                    <img loading="lazy" class="w-full h-auto rounded-3xl" src="./images/img1.jpeg" alt="Track">
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 3 -->
+        <div class="min-h-screen px-4 md:px-10 mt-10 md:mt-20">
+            <h2 class="font-['Orbitron'] text-4xl md:text-6xl text-[#fd5005] pl-4 md:pl-20" style="-webkit-text-stroke: 1px black;">Cars</h2>
+            
+            <div class="flex flex-col md:flex-row gap-4 mt-2 md:mt-8">
+                <img loading="lazy" id="btn" class="w-full h-72 md:w-[32%]" src="./images/car4.png" alt="Car 4">
+                <img loading="lazy" id="btn" class="w-full h-72 md:w-[32%]" src="./images/car5.png" alt="Car 5">
+                <img loading="lazy" id="btn" class="w-full h-72 md:w-[32%]" src="./images/car6.png" alt="Car 6">
+            </div>
+
+            <h2 class="font-['Orbitron'] text-4xl md:text-7xl text-[#fd5005] mt-20 pl-4 md:pl-[3.6vw]" style="-webkit-text-stroke: 1px black;">Comments!!!...</h2>
+            
+            <div class="comments mt-8 px-4 md:px-16 lg:px-22 w-full flex flex-col md:flex-row flex-wrap md:flex-nowrap items-center justify-center md:justify-between gap-6 md:gap-0">
+                <!-- Comment Card 1 -->
+                <div class="text-left h-auto md:h-52 w-full md:w-[32%] p-6 md:p-8 px-6 md:px-10 rounded-xl text-black font-semibold bg-white">
+                  <h5 class="text-xl md:text-2xl">There ipsum dolor sit amet hello, elit time.💕💕</h5>
+                  <div class="flex items-center justify-start gap-4">
+                    <div class="circle w-12 h-12 mt-4 rounded-full bg-red-300 overflow-hidden">
+                      <img loading="lazy" class="h-full w-full object-cover" src="./images/man1.png" alt="">
+                    </div>
+                    <div class="flex flex-col justify-center">
+                      <p class="mt-4">Name</p>
+                      <p class="text-zinc-600 text-sm">Description</p>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- Comment Card 2 -->
+                <div class="text-left h-auto md:h-52 w-full md:w-[32%] p-6 md:p-8 px-6 md:px-10 rounded-xl text-black font-semibold bg-white">
+                  <h5 class="text-xl md:text-2xl">There ipsum dolor sit amet hello, elit time.🖤</h5>
+                  <div class="flex items-center justify-start gap-4">
+                    <div class="circle w-12 h-12 mt-4 rounded-full bg-red-300 overflow-hidden">
+                      <img loading="lazy" class="h-full w-full object-cover" src="./images/man2.png" alt="">
+                    </div>
+                    <div class="flex flex-col justify-center">
+                      <p class="mt-4">Name</p>
+                      <p class="text-zinc-600 text-sm">Description</p>
+                    </div>
+                  </div>
+                </div>
+
+              
+                <!-- Comment Card 3 -->
+                <div class="text-left h-auto md:h-52 w-full md:w-[32%] p-6 md:p-8 px-6 md:px-10 rounded-xl text-black font-semibold bg-white">
+                  <h5 class="text-xl md:text-2xl">There ipsum dolor sit amet hello, elit time.🩷</h5>
+                  <div class="flex items-center justify-start gap-4">
+                    <div class="circle w-12 h-12 mt-4 rounded-full bg-red-300 overflow-hidden">
+                      <img loading="lazy" class="h-full w-full object-cover" src="./images/man3.jpeg" alt="">
+                    </div>
+                    <div class="flex flex-col justify-center">
+                      <p class="mt-4">Name</p>
+                      <p class="text-zinc-600 text-sm">Description</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Buttons Section -->
+              <div class="btn-bottom px-4 md:px-8 mt-10 pr-4 md:pr-20 flex flex-col sm:flex-row items-center justify-center md:justify-end gap-4">
+                <button id="btn" class="px-6 py-3 text-lg md:text-xl bg-black text-white font-semibold rounded-md w-full sm:w-auto">Follow</button>
+                <button id="btn" class="px-6 py-3 text-lg md:text-xl bg-[#e6e6e6] text-black font-semibold rounded-md w-full sm:w-auto">Subscribe</button>
+              </div>
+              
+        </div>
+
+        <footer class="text-white px-6 py-8">
+            <div class="max-w-7xl mx-auto">
+              <!-- Top Row: Logo + Social Icons -->
+              <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8">
+                <!-- Logo -->
+                <div>
+                  <h1 class="font-['Orbitron'] text-2xl font-bold text-orange-500 stroke-black tracking-wide" style="-webkit-text-stroke: 0.4px black;">HOT WHEELS</h1>
+                </div>
+          
+                <!-- Social Icons -->
+                <div class="flex gap-4 text-gray-300">
+                  <a id="btn" href="#"><i class="fab fa-facebook text-xl hover:text-white"></i></a>
+                  <a id="btn" href="#"><i class="fab fa-linkedin text-xl hover:text-white"></i></a>
+                  <a id="btn" href="#"><i class="fab fa-youtube text-xl hover:text-white"></i></a>
+                  <a id="btn" href="#"><i class="fab fa-instagram text-xl hover:text-white"></i></a>
+                </div>
+              </div>
+          
+              <!-- Footer Links Grid -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-sm">
+                <!-- Customer Service -->
+                <div>
+                  <h2 class="font-semibold text-white mb-2">Customer Service</h2>
+                  <ul class="space-y-1 text-gray-300">
+                    <li><a href="#" class="hover:text-white">Contact Us</a></li>
+                    <li><a href="#" class="hover:text-white">Shipping Rates & Policy</a></li>
+                    <li><a href="#" class="hover:text-white">FAQs</a></li>
+                  </ul>
+                </div>
+          
+                <!-- About Us -->
+                <div>
+                  <h2 class="font-semibold text-white mb-2">About Us</h2>
+                  <ul class="space-y-1 text-gray-300">
+                    <li><a href="#" class="hover:text-white">Mattel Corporate</a></li>
+                    <li><a href="#" class="hover:text-white">Careers</a></li>
+                    <li><a href="#" class="hover:text-white">Corporate Communications</a></li>
+                  </ul>
+                </div>
+          
+                <!-- Legal -->
+                <div>
+                  <h2 class="font-semibold text-white mb-2">Legal</h2>
+                  <ul class="space-y-1 text-gray-300">
+                    <li><a href="#" class="hover:text-white">Terms & Condition</a></li>
+                    <li><a href="#" class="hover:text-white">Terms of Sale</a></li>
+                    <li><a href="#" class="hover:text-white">Accessibility Statement</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        </footer>
+    </main>
+
+
+    <!--  Gsap is needed for Basic Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- Locomotive js -->
+   <!-- Locomotive Scroll JS -->
+   <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <!-- Shery js -->
+    <script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script> 
+    <script src="/javascripts/script.js"></script>
+</body>
+</html>
