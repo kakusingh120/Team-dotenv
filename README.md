@@ -48,7 +48,7 @@ A sleek, responsive landing page built for **Team Dotenv**, powered by elegant a
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/team-dotenv-landing-page.git
+git clone git@github.com:kakusingh120/Team-dotenv.git
 cd team-dotenv-landing-page
 ```
 
